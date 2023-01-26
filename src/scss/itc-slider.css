@@ -46,6 +46,13 @@
   will-change: transform;
 }
 
+.itc-slider__item.drop__menu-pack-slider {
+  flex: 0 0 25%;
+  max-width: 25%;
+  user-select: none;
+  will-change: transform;
+}
+
 /* кнопки влево и вправо */
 .itc-slider__btn {
   position: absolute;
@@ -67,7 +74,7 @@
   display: none;
 }
 
-.itc-slider__btn.header-slider__btn {
+.itc-slider__btn {
   position: absolute;
   top: 50%;
   display: flex;
@@ -84,27 +91,26 @@
   border-radius: 50%;
 }
 
-.itc-slider__btn.header-slider__btn:hover {
+.itc-slider__btn:hover svg path,
+.itc-slider__btn:focus svg path {
   transition: .2s ease-in-out;
-  border: 2px solid #56cfe1;
-  background-color: #56cfe1;
+  fill: #FFFFFF;
+}
+
+.itc-slider__btn-arrow-prev {
+  transform: translateX(-30%);
+}
+
+.itc-slider__btn-arrow-next {
+  transform: translateX(-10%);
 }
 
 .header-slider__btn_prev.itc-slider__btn_prev {
   left: 30px;
 }
 
-
 .header-slider__btn_next.itc-slider__btn_next {
   right: 30px;
-}
-
-.header-slider__btn_prev.itc-slider__btn_prev::before {
-  background-image: none;
-}
-
-.header-slider__btn_next.itc-slider__btn_next::before {
-  background-image: none;
 }
 
 .itc-slider__btn_prev {
@@ -117,10 +123,9 @@
 
 .itc-slider__btn:hover,
 .itc-slider__btn:focus {
-  color: #fff;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.3);
-  outline: 0;
+  transition: .2s ease-in-out;
+  border: 2px solid #56cfe1;
+  background-color: #56cfe1;
 }
 
 .itc-slider__btn::before {
@@ -130,14 +135,6 @@
   height: 20px;
   background: transparent no-repeat center center;
   background-size: 100% 100%;
-}
-
-.itc-slider__btn_prev::before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-.itc-slider__btn_next::before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
 /* индикаторы */
@@ -172,3 +169,46 @@
   background-color: rgba(0, 0, 0, 0.9);
   border: 2px solid rgba(0, 0, 0, 0.9);
 }
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+  .itc-slider__item.essential-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    user-select: none;
+    will-change: transform;
+  }
+}
+
+@media (max-width: 768px) {
+  .itc-slider__item.kits-slider__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .itc-slider__item.essential-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    user-select: none;
+    will-change: transform;
+  }
+}
+
+@media (max-width: 568px) {}
+
+@media (max-width: 450px) {
+  .itc-slider__item.kits-slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .itc-slider__item.essential-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    user-select: none;
+    will-change: transform;
+  }
+}
+
+@media (max-width: 350px) {}

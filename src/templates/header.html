@@ -2,46 +2,101 @@
     <div class="header__inner">
         <div class="container">
             <div class="header__menu">
+                <button class="menu__burger">
+                    <svg viewBox="0 0 32 32" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg"
+                        fill="#8f8f8f">
+                        <g data-name="Layer 2" id="Layer_2">
+                            <path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z" />
+                            <path d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+                            <path d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+                        </g>
+                    </svg>
+                </button>
                 <a class="logo__link" href="#">
                     <img class="logo__img" src="../images/logo.avif" alt="logo">
                 </a>
                 <nav class="nav">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link menu__link-home">
+                            <a class="menu__link menu__link-home" data-drop="home">
                                 HOME
                             </a>
                         </li>
-                        <li class="menu__item menu__item-drop">
-                            <a class="menu__link">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link-kits menu__drop" data-drop="kits">
                                 First Aid Kits
                             </a>
                         </li>
-                        <li class="menu__item menu__item-drop">
-                            <a class="menu__link">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link-pack menu__drop" data-drop="pack">
                                 Medic Pack
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link">
+                            <a class="menu__link" data-drop="supplies">
                                 First Aid Supplies
                             </a>
                         </li>
-                        <li class="menu__item menu__item-drop">
-                            <a class="menu__link">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link-training menu__drop" data-drop="training">
                                 Training Course
                             </a>
+                            <ul class="drop__menu-list drop__menu-list-training">
+                                <li class="drop__menu-list-item">
+                                    <a class="drop__menu-list-link" href="#">
+                                        Battlefield first aid
+                                    </a>
+                                </li>
+                                <li class="drop__menu-list-item">
+                                    <a class="drop__menu-list-link" href="#">
+                                        What is the importance of tourniquet
+                                    </a>
+                                </li>
+                                <li class="drop__menu-list-item">
+                                    <a class="drop__menu-list-link" href="#">
+                                        The Best IFAK Guide
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link">
+                            <a class="menu__link" data-drop="wholesale">
                                 Wholesale-Retail
                             </a>
                         </li>
-                        <li class="menu__item menu__item-drop">
-                            <a class="menu__link">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link-about menu__drop" data-drop="about">
                                 About Us
                             </a>
+                            <ul class="drop__menu-list drop__menu-list-about">
+                                <li class="drop__menu-list-item">
+                                    <a class="drop__menu-list-link" href="#">
+                                        Brand Story
+                                    </a>
+                                </li>
+                                <li class="drop__menu-list-item">
+                                    <a class="drop__menu-list-link" href="#">
+                                        Genuine Query
+                                    </a>
+                                </li>
+                                <li class="drop__menu-list-item">
+                                    <a class="drop__menu-list-link" href="#">
+                                        Traning Course
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
+
+                        <button class="nav__close">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="40px" height="40px" viewBox="0 0 40 40" version="1.1">
+                                <g>
+                                    <path
+                                        style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:#FFFFFF;stroke-opacity:1;stroke-miterlimit:4;"
+                                        d="M 7 7 L 25 25 M 7 25 L 25 7 " transform="matrix(1.25,0,0,1.25,0,0)" />
+                                </g>
+                            </svg>
+                        </button>
                     </ul>
                 </nav>
                 <div class="user-nav">
@@ -84,6 +139,536 @@
                 </div>
             </div>
         </div>
+
+        <div class="drop__menu drop__menu-kits">
+            <div class="container">
+                <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true"
+                    data-interval="7000">
+                    <div class="itc-slider__wrapper">
+                        <div class="itc-slider__items">
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <span class="products__items-onsale">
+                                                <span>-12%</span>
+                                            </span>
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/1.webp" alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/2.webp" alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/22.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <span class="products__items-onsale">
+                                                <span>-37%</span>
+                                            </span>
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/23.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/24.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/3.jpg" alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/33.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/34.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/35.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item essential-item">
+                                <div class="products-item">
+                                    <div class="products-item__box">
+                                        <a class="products__link" href="#">
+                                            <span class="products__items-onsale">
+                                                <span>-27%</span>
+                                            </span>
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/1.webp" alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="itc-slider__btn itc-slider__btn_prev">
+                        <svg class="itc-slider__btn-arrow-prev" width="41" height="60" viewBox="0 0 41 60" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M40.6499 7L33.0823 0L0.649902 30L33.0823 60L40.6499 53L15.785 30L40.6499 7Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                    <button class="itc-slider__btn itc-slider__btn_next">
+                        <svg class="itc-slider__btn-arrow-next" width="41" height="60" viewBox="0 0 41 60" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.649902 52.5L25.5148 30L0.649902 7L8.21747 0L40.6499 30L8.21747 60L0.649902 52.5Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop__menu drop__menu-pack">
+            <div class="container">
+                <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true"
+                    data-interval="7000">
+                    <div class="itc-slider__wrapper">
+                        <div class="itc-slider__items">
+                            <div class="itc-slider__item drop__menu-pack-slider">
+                                <div class="products-item">
+                                    <div class="products-item__box packs-item__box">
+                                        <a class="products__link" href="#">
+                                            <span class="products__items-onsale">
+                                                <span>-2%</span>
+                                            </span>
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/24.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item drop__menu-pack-slider">
+                                <div class="products-item">
+                                    <div class="products-item__box packs-item__box">
+                                        <a class="products__link" href="#">
+
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/34.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item drop__menu-pack-slider">
+                                <div class="products-item">
+                                    <div class="products-item__box packs-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/2.webp" alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item drop__menu-pack-slider">
+                                <div class="products-item">
+                                    <div class="products-item__box packs-item__box">
+                                        <a class="products__link" href="#">
+                                            <span class="products__items-onsale">
+                                                <span>-2%</span>
+                                            </span>
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/24.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item drop__menu-pack-slider">
+                                <div class="products-item">
+                                    <div class="products-item__box packs-item__box">
+                                        <a class="products__link" href="#">
+
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/34.webp"
+                                                    alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itc-slider__item drop__menu-pack-slider">
+                                <div class="products-item">
+                                    <div class="products-item__box packs-item__box">
+                                        <a class="products__link" href="#">
+                                            <div class="products-item__img-box">
+                                                <img class="products__img" src="../images/product/2.webp" alt="product">
+                                            </div>
+                                        </a>
+                                        <div class="products-item__menu-box">
+                                            <a class="products-item__menu-link products-item__menu-link-view"
+                                                data-front="Quick View" href="#"></a>
+                                            <a class="products-item__menu-link products-item__menu-link-shop"
+                                                data-front="Quick Shop" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="products-item__content">
+                                        <h3 class="products-item__title">
+                                            <a class="products-item__link" href="#">
+                                                Rhino Rescue Tourniquet Storage
+                                            </a>
+                                        </h3>
+                                        <span class="products-item__price">
+                                            from
+                                            <span class="products-item__money">Br 728,294.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="itc-slider__btn itc-slider__btn_prev">
+                        <svg class="itc-slider__btn-arrow-prev" width="41" height="60" viewBox="0 0 41 60" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M40.6499 7L33.0823 0L0.649902 30L33.0823 60L40.6499 53L15.785 30L40.6499 7Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                    <button class="itc-slider__btn itc-slider__btn_next">
+                        <svg class="itc-slider__btn-arrow-next" width="41" height="60" viewBox="0 0 41 60" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.649902 52.5L25.5148 30L0.649902 7L8.21747 0L40.6499 30L8.21747 60L0.649902 52.5Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="itc-slider header__content" data-slider="itc-slider" data-loop="true" data-autoplay="true"
@@ -102,8 +687,18 @@
                 </div>
             </div>
             <button class="itc-slider__btn header-slider__btn header-slider__btn_prev itc-slider__btn_prev">
+                <svg class="itc-slider__btn-arrow-prev" width="41" height="60" viewBox="0 0 41 60" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40.6499 7L33.0823 0L0.649902 30L33.0823 60L40.6499 53L15.785 30L40.6499 7Z"
+                        fill="black" />
+                </svg>
             </button>
             <button class="itc-slider__btn header-slider__btn header-slider__btn_next itc-slider__btn_next">
+                <svg class="itc-slider__btn-arrow-next" width="41" height="60" viewBox="0 0 41 60" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.649902 52.5L25.5148 30L0.649902 7L8.21747 0L40.6499 30L8.21747 60L0.649902 52.5Z"
+                        fill="black" />
+                </svg>
             </button>
         </div>
     </div>
