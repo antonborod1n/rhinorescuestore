@@ -25,3 +25,73 @@ body {
 .main {
     flex-grow: 1;
 }
+
+/* .breadcrumbs {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 25px;
+        color: $text;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/icons/arrow-right.svg);
+            top: 5px;
+            right: -20px;
+            width: 15px;
+            height: 15px;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    &__link {
+        color: inherit;
+
+        &:hover {
+            color: $title;
+        }
+    }
+} */
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #FFFFFF;
+
+    & a {
+        margin-left: 5px;
+    }
+
+    &__link {
+        padding: 10px;
+        border-radius: 40px;
+        font-size: 13px;
+        color: $text;
+        padding: 10px 20px;
+
+        &--active {
+            color: #FFFFFF;
+        }
+
+        &-next {
+            padding: 10px;
+            border-radius: 40px;
+            font-size: 13px;
+            color: $text;
+        }
+    }
+}

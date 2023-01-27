@@ -10,9 +10,10 @@
 </head>
 
 <body>
-    <%= require('html-loader!./templates/header.html').default %>
+    <%= require('html-loader!./templates/header-page.html').default %>
         <main class="main">
-
+            <%= require('html-loader!./templates/blog-page.html').default %>
+                <%= require('html-loader!./templates/pagination.html').default %>
         </main>
         <%= require('html-loader!./templates/footer.html').default %>
 </body>
