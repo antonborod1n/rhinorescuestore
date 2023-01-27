@@ -1,3 +1,10 @@
+@media (max-width: 1400px) {
+    .header-slider__item {
+        width: 100%;
+        height: 100%;
+    }
+}
+
 @media (max-width: 1200px) {
 
     .best-sales__title::after,
@@ -5,23 +12,77 @@
         display: none;
     }
 
-    .menu__list {
-        display: none;
+    .logo {
+        &__link {
+            display: block;
+            margin: 0 auto;
+        }
     }
 
-    .menu__link {
-        color: #000000;
+    .menu {
+        &__list {
+            display: none;
+
+            &.menu__list--active {
+                display: flex;
+                justify-content: start;
+                align-items: flex-start;
+                flex-direction: column;
+                position: absolute;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+                width: 320px;
+                height: 100vh;
+                box-shadow: 0 0 12px rgba(0, 0, 0, .12);
+                overflow-y: auto;
+                overflow-x: hidden;
+                z-index: 500;
+            }
+        }
+
+        &__link {
+            color: #000000;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        &__burger {
+            display: block;
+        }
+
+        &__item {
+            flex-direction: row;
+            border-bottom: 1px solid rgba(129, 129, 129, .2);
+            text-align: left;
+            padding: 0px;
+            width: 100%;
+        }
+
+        &__drop::after {
+            display: none;
+        }
     }
 
-    .menu__burger {
-        display: block;
+    .nav {
+        flex-grow: 0;
+
+        &__close.nav__close--active {
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            left: 320px;
+            top: 0;
+            width: 45px;
+            height: 45px;
+            z-index: 10000;
+            background-color: #222;
+        }
     }
 }
 
 @media (max-width: 992px) {
-    .header-slider__item {
-        height: 100%;
-    }
 
     .about {
         &__video {
@@ -104,6 +165,7 @@
             }
         }
     }
+
 }
 
 @media (max-width: 768px) {
@@ -168,6 +230,15 @@
             height: 100%;
         }
     }
+
+    .menu__list.menu__list--active {
+        width: 270px;
+    }
+
+    .nav__close.nav__close--active {
+        left: 270px;
+    }
+
 }
 
 @media (max-width: 350px) {}

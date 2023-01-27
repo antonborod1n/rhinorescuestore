@@ -9,18 +9,24 @@
 </head>
 
 <body>
-    <%= require('html-loader!./templates/header.html').default %>
-        <main class="main">
-
-            <%= require('html-loader!./templates/benefits.html').default %>
-                <%= require('html-loader!./templates/kits.html').default %>
-                    <%= require('html-loader!./templates/packs.html').default %>
-                        <!-- <%= require('html-loader!./templates/best-sales.html').default %> -->
+    <header class="header">
+        <%= require('html-loader!./templates/header.html').default %>
+            <%= require('html-loader!./templates/header-slider.html').default %>
+    </header>
+    <main class="main">
+        <%= require('html-loader!./templates/benefits.html').default %>
+            <%= require('html-loader!./templates/kits.html').default %>
+                <%= require('html-loader!./templates/packs.html').default %>
+                    <%= require('html-loader!./templates/best-sales.html').default %>
                         <%= require('html-loader!./templates/essentials.html').default %>
                             <%= require('html-loader!./templates/social.html').default %>
                                 <%= require('html-loader!./templates/about.html').default %>
-        </main>
-        <%= require('html-loader!./templates/footer.html').default %>
+    </main>
+    <footer class="footer">
+        <%= require('html-loader!./templates/footer-top.html').default %>
+            <%= require('html-loader!./templates/footer.html').default %>
+
+    </footer>
 </body>
 
 </html>
