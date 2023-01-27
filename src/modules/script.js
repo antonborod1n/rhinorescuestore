@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let dropMenuAbout = document.querySelector('.drop__menu-list-about');
     let trainingLink = document.querySelector('.menu__link-training');
     let aboutLink = document.querySelector('.menu__link-about');
+    let bestSalesInner = document.querySelector('.best-sales__inner');
 
     /* 
     kitsLink.addEventListener('mouseover', function () {
@@ -36,12 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
  */
-    bestSalesBtn.forEach(item => item.addEventListener('click', addActivelass));
+
+    /* bestSalesInner.addEventListener('click', function (e) {
+        let target = e.target;
+        if (target.classList.contains('best-sales__btn')) {
+
+        }
+    })
 
     function addActivelass() {
         bestSalesProductItem.forEach(item => item.classList.toggle('best-sales__product-item--active'));
-    }
+    } */
 
+
+    //header
     window.addEventListener('scroll', function () {
         if (window.scrollY > 1) {
             headerInner.classList.add('header__inner--active');

@@ -2,7 +2,7 @@
 /* Переменные */
 
 .blog {
-    padding: 100px 0;
+    padding: 100px 0 50px;
 }
 
 .blog__inner {
@@ -13,7 +13,7 @@
     grid-row-gap: 20px;
 }
 
-.blog-item__box {
+.blog-item {
     margin-bottom: 20px;
 
     &:hover {
@@ -25,9 +25,10 @@
 }
 
 .blog-item__img-box {
-    width: 775px;
+    max-width: 775px;
     height: 500px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .blog__img {
@@ -59,4 +60,31 @@
 .blog__data {
     font-size: 14px;
     margin-bottom: 10px;
+}
+
+
+@media (max-width: 992px) {
+    .blog__inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+    }
+
+    .blog-item__img-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-item__img-box {
+        height: 400px;
+    }
+}
+
+@media (max-width: 568px) {
+    .blog-item__img-box {
+        height: 300px;
+    }
 }
