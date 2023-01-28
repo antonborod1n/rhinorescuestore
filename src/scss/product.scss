@@ -1,0 +1,81 @@
+@import 'vars';
+/* Переменные */
+
+.goods {
+    padding: 100px 0;
+
+    &__tabs {
+        margin-bottom: 70px;
+
+        &-control {
+            text-align: center;
+
+            &-btn {
+                @extend %golos-600;
+                color: #878787;
+                font-size: 14px;
+                line-height: 17px;
+                border: 1px solid transparent;
+                background: transparent;
+                min-height: 40px;
+                border-radius: 40px;
+                padding: 0 25px;
+                cursor: pointer;
+
+                &--active {
+                    border: 1px solid $text;
+                    color: $text;
+
+                    &:hover {
+                        color: $accent;
+                        border: 1px solid $accent;
+                        transition: all .3s;
+                    }
+                }
+
+                &:hover {
+                    color: $accent;
+                    transition: all .3s;
+                }
+            }
+        }
+
+        &-content-desc {
+            padding: 20px;
+        }
+
+        &-content-foto {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+        }
+
+        &-content-rev {
+            padding: 20px;
+        }
+    }
+}
+
+.goods__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.rating-star::before {
+    content: url(../images/icons/star.svg);
+}
+
+.goods__also-item {
+    width: 370px;
+    min-height: 430px;
+    border-radius: 2px;
+}
+
+.goods__also-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}

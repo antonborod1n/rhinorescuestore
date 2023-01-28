@@ -26,13 +26,13 @@ body {
     flex-grow: 1;
 }
 
-/* .breadcrumbs {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+.breadcrumbs {
+    padding: 20px 0;
+    background: #f6f6f8;
 
     &__list {
         display: flex;
+        justify-content: flex-start;
     }
 
     &__item {
@@ -44,11 +44,11 @@ body {
         &::after {
             content: "";
             position: absolute;
-            background-image: url(../images/icons/arrow-right.svg);
-            top: 5px;
+            background-image: url(../images/icons/arrows-right.svg);
+            top: 4px;
             right: -20px;
-            width: 15px;
-            height: 15px;
+            width: 14px;
+            height: 14px;
         }
 
         &:last-child::after {
@@ -57,13 +57,21 @@ body {
     }
 
     &__link {
-        color: inherit;
+        color: $text;
+        transition: color .3s;
+        font-size: 13px;
+        line-height: 18px;
 
         &:hover {
-            color: $title;
+            color: $accent;
+            transition: color .3s;
+        }
+
+        &-last:hover {
+            color: $text;
         }
     }
-} */
+}
 
 .pagination {
     display: flex;

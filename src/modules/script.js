@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let bestSalesBtn = document.querySelectorAll('.best-sales__btn');
-    let bestSalesProductItem = document.querySelectorAll('.best-sales__product-item');
     let headerInner = document.querySelector('.header__inner')
     let logoLink = document.querySelector('.logo__link')
     let menuLink = document.querySelectorAll('.menu__link')
@@ -14,8 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let dropMenuAbout = document.querySelector('.drop__menu-list-about');
     let trainingLink = document.querySelector('.menu__link-training');
     let aboutLink = document.querySelector('.menu__link-about');
-    let bestSalesInner = document.querySelector('.best-sales__inner');
 
+    let bestSalesInner = document.querySelector('.best-sales__inner');
+    let bestSalesBtn = document.querySelectorAll('.best-sales__btn');
+    let bestSalesProductItem = document.querySelectorAll('.best-sales__product-item');
     /* 
     kitsLink.addEventListener('mouseover', function () {
         dropMenuKits.classList.toggle('drop__menu-kits--active')
@@ -38,17 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
  */
 
-    /* bestSalesInner.addEventListener('click', function (e) {
-        let target = e.target;
-        if (target.classList.contains('best-sales__btn')) {
+    delegate(bestSalesInner, 'click', '.best-sales__btn', function () {
 
-        }
     })
 
-    function addActivelass() {
-        bestSalesProductItem.forEach(item => item.classList.toggle('best-sales__product-item--active'));
-    } */
-
+    bestSalesProductItem.forEach(item => item.classList.toggle('best-sales__product-item--active'));
 
     //header
     window.addEventListener('scroll', function () {
@@ -116,5 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+});
 
-})
+
+function delegate(box, eventname, selector, fn) {
+    box.addEventListener(eventname, function (e) {
+        let el = e.target.closest(selector);
+
+        if (el !== null && box.contains(el)) {
+            fn.call(el, e);
+        }
+    });
+}

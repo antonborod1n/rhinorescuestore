@@ -9,6 +9,9 @@ module.exports = {
     main: path.resolve(__dirname, './src/index.js'),
     index_catalog: path.resolve(__dirname, './src/index_catalog.js'),
     index_product: path.resolve(__dirname, './src/index_product.js'),
+    index_blog: path.resolve(__dirname, './src/index_blog.js'),
+    index_cart: path.resolve(__dirname, './src/index_cart.js'),
+    inner_article: path.resolve(__dirname, './src/inner_article.js'),
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -27,9 +30,24 @@ module.exports = {
       chunks: ['index_catalog']
     }),
     new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/blog.html'),
+      filename: 'blog.html',
+      chunks: ['index_blog']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/cart.html'),
+      filename: 'cart.html',
+      chunks: ['index_cart']
+    }),
+    new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/product.html'),
       filename: 'product.html',
       chunks: ['index_product']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/article.html'),
+      filename: 'article.html',
+      chunks: ['iinner_article']
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -69,12 +87,12 @@ module.exports = {
         test: /\.(html)$/,
         include: path.join(__dirname, 'src/views'),
         use: {
-            loader: 'html-loader',
-            options: {
-                interpolate: true
-            }
+          loader: 'html-loader',
+          options: {
+            interpolate: true
+          }
         }
-      } 
+      }
     ]
   },
 
