@@ -99,3 +99,35 @@ body {
         }
     }
 }
+
+.products-reiting__box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 3px;
+}
+
+.rating-star-yellow::before {
+    content: url(../images/icons/star-yellow.svg);
+}
+
+.products-item .essentials-items::before {
+    content: url(../images/icons/star.svg);
+}
+
+.rating-star-reviews {
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.15);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}

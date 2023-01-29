@@ -1,3 +1,4 @@
 import "./scss/main.scss";
 import "./scss/cart.scss";
-import './modules/script';
+import "./scss/itc-slider.css";
+import "./modules/itc-slider";
