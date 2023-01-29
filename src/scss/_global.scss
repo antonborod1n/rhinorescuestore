@@ -111,6 +111,10 @@ body {
     content: url(../images/icons/star-yellow.svg);
 }
 
+.rating-star::before {
+    content: url(../images/icons/star.svg);
+}
+
 .products-item .essentials-items::before {
     content: url(../images/icons/star.svg);
 }
@@ -121,7 +125,6 @@ body {
     line-height: 20px;
 }
 
-
 @keyframes radial-pulse {
     0% {
         box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.15);
@@ -130,4 +133,42 @@ body {
     100% {
         box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
     }
+}
+
+
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 120px;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #222;
+    border-radius: 40px;
+    margin: 0 auto;
+}
+
+.quantity-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.quantity-delete {
+    padding: 0 6px 0 13px;
+}
+
+.quantity-plus {
+    padding: 0 13px 0 6px;
+}
+
+.quantity-input input {
+    width: 35px;
+    border: none;
+    height: 38px;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #222;
+    text-align: center;
 }

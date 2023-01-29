@@ -8,6 +8,7 @@
 /* Сброс */
 @import 'global';
 /* Глобальные стили */
+
 @import 'catalog';
 @import 'blog';
 
@@ -289,6 +290,7 @@
                         top: -45px;
                         right: -52px;
                         z-index: 10;
+                        transition: opacity .5s;
                     }
 
                     transition: all .5s;
@@ -1028,7 +1030,6 @@
     padding: 30px 0;
     height: auto;
 }
-
 
 /* МЕДИА-ЗАПРОСЫ */
 @import 'media';
