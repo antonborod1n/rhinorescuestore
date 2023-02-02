@@ -18,9 +18,9 @@ $(function () {
         asNavFor: '.goods-content__slide-thumb',
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>',
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-arrows-back.svg" alt="arrow"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-arrows-forward.svg" alt="arrow"></button>',
     });
 });
 

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    catalogFilterSortBtn.addEventListener('click', function (e) {
+    catalogFilterSortBtn.addEventListener('click', function () {
         catalogFilterSort.classList.toggle('active-content');
     })
 });
