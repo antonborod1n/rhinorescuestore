@@ -1,9 +1,30 @@
 import $ from "jquery";
 import "ion-rangeslider";
+import 'slick-carousel';
 
-document.addEventListener('DOMContentLoaded', () => {
+$(function () {
     $(".form__filter-input").ionRangeSlider();
 
+    $('.goods-content__slide-thumb').slick({
+        asNavFor: '.goods-content__slide-big',
+        focusOnSelect: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        vertical: true,
+        draggable: false,
+    });
+
+    $('.goods-content__slide-big').slick({
+        asNavFor: '.goods-content__slide-thumb',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     let headerInner = document.querySelector('.header__inner')
     let logoLink = document.querySelector('.logo__link')
     let menuLink = document.querySelectorAll('.menu__link')
@@ -37,28 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }))
 
     //menu
-    kitsLink.addEventListener('mouseover', function () {
+    kitsLink.addEventListener('click', function () {
         dropMenuKits.classList.toggle('drop__menu-kits--active');
         dropMenuPack.classList.remove('drop__menu-pack--active');
         dropMenuTraining.classList.remove('drop__menu-list--active');
         dropMenuAbout.classList.remove('drop__menu-list--active');
     });
 
-    packLink.addEventListener('mouseover', function () {
+    packLink.addEventListener('click', function () {
         dropMenuPack.classList.toggle('drop__menu-pack--active');
         dropMenuKits.classList.remove('drop__menu-kits--active');
         dropMenuTraining.classList.remove('drop__menu-list--active');
         dropMenuAbout.classList.remove('drop__menu-list--active');
     });
 
-    trainingLink.addEventListener('mouseover', function () {
+    trainingLink.addEventListener('click', function () {
         dropMenuTraining.classList.toggle('drop__menu-list--active');
         dropMenuPack.classList.remove('drop__menu-pack--active');
         dropMenuKits.classList.remove('drop__menu-kits--active');
         dropMenuAbout.classList.remove('drop__menu-list--active');
     });
 
-    aboutLink.addEventListener('mouseover', function () {
+    aboutLink.addEventListener('click', function () {
         dropMenuAbout.classList.toggle('drop__menu-list--active');
         dropMenuPack.classList.remove('drop__menu-pack--active');
         dropMenuKits.classList.remove('drop__menu-kits--active');

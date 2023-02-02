@@ -9,7 +9,6 @@
 @import 'global';
 /* Глобальные стили */
 
-@import 'catalog';
 @import 'blog';
 
 /* HEADER */
@@ -34,8 +33,6 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
     }
-
-
 
     &-slider__item {
         height: 635px
