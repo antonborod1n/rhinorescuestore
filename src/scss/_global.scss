@@ -171,3 +171,10 @@ body {
     color: #222;
     text-align: center;
 }
+
+.goods-reiting__box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 3px;
+}

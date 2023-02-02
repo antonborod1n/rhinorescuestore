@@ -33,6 +33,13 @@
   will-change: transform;
 }
 
+.itc-slider__item.cart-slider__item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  user-select: none;
+  will-change: transform;
+}
+
 .itc-slider__item.header-slider__items {
   flex: 0 0 100%;
   max-width: 100%;
