@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }))
 
     //menu
-    kitsLink.addEventListener('click', function () {
+    kitsLink.addEventListener('mouseover', function () {
         dropMenuKits.classList.toggle('drop__menu-kits--active');
         trainingLink.classList.remove('active-link')
         dropMenuPack.classList.remove('drop__menu-pack--active');
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dropMenuAbout.classList.remove('drop__menu-list--active');
     });
 
-    packLink.addEventListener('click', function () {
+    packLink.addEventListener('mouseover', function () {
         dropMenuPack.classList.toggle('drop__menu-pack--active');
         trainingLink.classList.remove('active-link')
         dropMenuKits.classList.remove('drop__menu-kits--active');
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dropMenuAbout.classList.remove('drop__menu-list--active');
     });
 
-    trainingLink.addEventListener('click', function () {
+    trainingLink.addEventListener('mouseover', function () {
         dropMenuTraining.classList.toggle('drop__menu-list--active');
         trainingLink.classList.toggle('active-link')
         dropMenuPack.classList.remove('drop__menu-pack--active');
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dropMenuAbout.classList.remove('drop__menu-list--active');
     });
 
-    aboutLink.addEventListener('click', function () {
+    aboutLink.addEventListener('mouseover', function () {
         dropMenuAbout.classList.toggle('drop__menu-list--active');
         trainingLink.classList.remove('active-link')
         aboutLink.classList.toggle('active-link')
