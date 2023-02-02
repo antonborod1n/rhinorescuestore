@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //search
-    const serchLink = document.querySelector('.user-nav__link');
+    const serchLink = document.querySelector('.user-nav__link-search');
     const serchPopup = document.querySelector('.serch-popup');
 
     serchLink.addEventListener('click', function (e) {
