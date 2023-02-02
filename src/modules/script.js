@@ -166,5 +166,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     accordeon('.footer__title');
-    accordeon('.catalog__filter-main-btn');
 });

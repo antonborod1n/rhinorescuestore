@@ -72,6 +72,7 @@
     justify-content: center;
     transition: fill .3s;
     cursor: pointer;
+    color: #878787;
 
     &:hover svg {
         fill: $accent;
@@ -79,30 +80,28 @@
     }
 
     &:hover {
-        .catalog__filter-title {
-            color: $accent;
-            transition: color .3s;
-        }
+        color: $accent;
+        transition: color .3s;
     }
 }
 
 .catalog__filter-sort {
     visibility: hidden;
     opacity: 0;
-    max-height: 0;
-    transition: all 0.3s ease-out;
+    height: 0;
+    transition: opacity .3s ease-out;
 
     &.active-content {
         opacity: 1;
         visibility: visible;
-        max-height: 0;
-        transition: all 0.3s ease-out;
+        transition: opacity .3s ease-out;
         margin-top: 0;
         font-size: 14px;
         display: flex;
         column-gap: 20px;
         width: 100%;
         padding: 30px;
+        height: 100%;
         margin-top: 30px;
         margin-bottom: 40px;
         border-radius: 5px;
@@ -304,7 +303,6 @@
 }
 
 @media (max-width: 450px) {
-
     .catalog__filter-sort-item {
         width: 220px;
 
