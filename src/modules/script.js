@@ -49,10 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
     //search
     const serchLink = document.querySelector('.user-nav__link-search');
     const serchPopup = document.querySelector('.serch-popup');
+    const serchClose = document.querySelector('.serch-popup-close');
 
     serchLink.addEventListener('click', function (e) {
         e.preventDefault();
-        serchPopup.classList.toggle('serch-popup--active');
+        serchPopup.classList.add('serch-popup--active');
+    })
+
+    serchClose.addEventListener('click', function (e) {
+        serchPopup.classList.remove('serch-popup--active');
     })
 
     //btn
@@ -68,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //menu
     kitsLink.addEventListener('mouseover', function () {
-        dropMenuKits.classList.toggle('drop__menu-kits--active');
+        dropMenuKits.classList.add('drop__menu-kits--active');
         trainingLink.classList.remove('active-link')
         dropMenuPack.classList.remove('drop__menu-pack--active');
         dropMenuTraining.classList.remove('drop__menu-list--active');

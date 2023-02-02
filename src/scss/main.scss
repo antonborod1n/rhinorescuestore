@@ -135,7 +135,7 @@
 
 .serch-popup {
     position: fixed;
-    top: 84px;
+    top: 0;
     bottom: 0;
     right: 0;
     transform: translateY(-500%);
@@ -148,7 +148,7 @@
     opacity: 0;
     background-color: #fff;
     transition: opacity .3s;
-    padding: 30px 20px;
+    padding: 50px 20px;
 
     &.serch-popup--active {
         overflow: visible;
@@ -1178,6 +1178,52 @@
     padding: 30px 0;
     height: auto;
 }
+
+
+.seacrh-result {
+    padding: 20px 0;
+}
+
+
+.seacrh-result-title {
+    padding: 10px 20px;
+    border-top: 1px solid rgba(129, 129, 129, .2);
+    border-bottom: 1px solid rgba(129, 129, 129, .2);
+}
+
+.seacrh-item {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin: 10px 0;
+}
+
+.seacrh-item-img {
+    width: 80px;
+    height: 80px;
+}
+
+.seacrh-item-title {
+    color: #222;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.seacrh-item-price span {
+    font-size: 14px;
+    line-height: 24px;
+    color: #878787;
+    margin-left: 5px;
+}
+
+.serch-popup-close {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
 
 /* МЕДИА-ЗАПРОСЫ */
 @import 'media';
