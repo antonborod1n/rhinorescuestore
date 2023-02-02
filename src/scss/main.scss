@@ -11,6 +11,12 @@
 
 @import 'blog';
 
+
+
+.drop__menu-list-kits {
+    display: none;
+}
+
 /* HEADER */
 .header {
     &__menu {
@@ -1163,27 +1169,24 @@
     transition: opacity .3s;
 }
 
-.drop__menu-kits--active {
+.menu--active {
     overflow: visible;
     opacity: 1;
-    transition: opacity .3s;
-    padding: 70px 0;
     height: auto;
+    transition: opacity .3s;
+}
+
+.drop__menu-kits--active {
+    padding: 70px 0;
 }
 
 .drop__menu-pack--active {
-    overflow: visible;
-    opacity: 1;
-    transition: opacity .3s;
     padding: 30px 0;
-    height: auto;
 }
-
 
 .seacrh-result {
     padding: 20px 0;
 }
-
 
 .seacrh-result-title {
     padding: 10px 20px;

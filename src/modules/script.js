@@ -29,12 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let logoLink = document.querySelector('.logo__link')
     let menuLink = document.querySelectorAll('.menu__link')
     let userNavLink = document.querySelectorAll('.user-nav__link')
-    let kitsLink = document.querySelector('.menu__link-kits');
-    let packLink = document.querySelector('.menu__link-pack');
+
+    let dropMenu = document.querySelectorAll('.drop__menu')
+
     let dropMenuKits = document.querySelector('.drop__menu-kits');
     let dropMenuPack = document.querySelector('.drop__menu-pack');
     let dropMenuTraining = document.querySelector('.drop__menu-list-training');
     let dropMenuAbout = document.querySelector('.drop__menu-list-about');
+
     let trainingLink = document.querySelector('.menu__link-training');
     let aboutLink = document.querySelector('.menu__link-about');
     let bestSalesInner = document.querySelector('.best-sales__inner');
@@ -43,8 +45,40 @@ document.addEventListener('DOMContentLoaded', () => {
     let closebestSalesProductItem = document.querySelectorAll('.best-sales__product-item-close');
 
     headerInner.addEventListener('mouseover', function (e) {
-        console.log(e.target)
+        let target = e.target;
+        let current = e.currentTarget;
+
+        if (target.classList.contains('menu__link-kits')) {
+            closeMenu();
+            dropMenuKits.classList.add('menu--active')
+        }
+        if (target.classList.contains('menu__link-pack')) {
+            closeMenu();
+            dropMenuPack.classList.add('menu--active')
+        }
+        if (target.classList.contains('menu__link-training')) {
+            closeMenu();
+            dropMenuTraining.classList.add('drop__menu-list--active')
+        }
+        if (target.classList.contains('menu__link-about')) {
+            closeMenu();
+            dropMenuAbout.classList.add('drop__menu-list--active')
+        }
     });
+
+    headerInner.addEventListener('click', function (e) {
+        let target = e.target;
+        let current = e.currentTarget;
+        console.log(current)
+        if (target.contains('goods')) {
+            closeMenu();
+        }
+    });
+
+    function closeMenu() {
+        dropMenu.forEach(item => item.classList.remove('menu--active',));
+        dropMenu.forEach(item => item.classList.remove('drop__menu-list--active'));
+    }
 
     //search
     const serchLink = document.querySelector('.user-nav__link-search');
@@ -70,40 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let product = this.parentNode;
         product.classList.remove('best-sales__product-item--active');
     }))
-
-    //menu
-    kitsLink.addEventListener('mouseover', function () {
-        dropMenuKits.classList.add('drop__menu-kits--active');
-        trainingLink.classList.remove('active-link')
-        dropMenuPack.classList.remove('drop__menu-pack--active');
-        dropMenuTraining.classList.remove('drop__menu-list--active');
-        dropMenuAbout.classList.remove('drop__menu-list--active');
-    });
-
-    packLink.addEventListener('mouseover', function () {
-        dropMenuPack.classList.toggle('drop__menu-pack--active');
-        trainingLink.classList.remove('active-link')
-        dropMenuKits.classList.remove('drop__menu-kits--active');
-        dropMenuTraining.classList.remove('drop__menu-list--active');
-        dropMenuAbout.classList.remove('drop__menu-list--active');
-    });
-
-    trainingLink.addEventListener('mouseover', function () {
-        dropMenuTraining.classList.toggle('drop__menu-list--active');
-        trainingLink.classList.toggle('active-link')
-        dropMenuPack.classList.remove('drop__menu-pack--active');
-        dropMenuKits.classList.remove('drop__menu-kits--active');
-        dropMenuAbout.classList.remove('drop__menu-list--active');
-    });
-
-    aboutLink.addEventListener('mouseover', function () {
-        dropMenuAbout.classList.toggle('drop__menu-list--active');
-        trainingLink.classList.remove('active-link')
-        aboutLink.classList.toggle('active-link')
-        dropMenuPack.classList.remove('drop__menu-pack--active');
-        dropMenuKits.classList.remove('drop__menu-kits--active');
-        dropMenuTraining.classList.remove('drop__menu-list--active');
-    });
 
     //header
     window.addEventListener('scroll', function () {
@@ -166,4 +166,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     accordeon('.footer__title');
+
+    //rating
+    let ratingList = document.querySelectorAll('.rating__item');
+    let ratingArray = Array.prototype.slice.call(ratingList);
+
+    ratingArray.forEach(item => {
+        item.addEventListener('click', () => {
+            const { itemValue } = item.dataset;
+            item.parentNode.dataset.totalValue = item.dataset.itemValue;
+        });
+    });
 });

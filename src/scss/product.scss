@@ -110,9 +110,10 @@
     margin-bottom: 10px;
 }
 
-.products-reiting__box {}
-
-
+.products-reiting__box {
+    align-items: center;
+    display: flex;
+}
 
 .rating-star-yellow {}
 
