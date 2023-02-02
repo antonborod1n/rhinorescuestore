@@ -138,6 +138,7 @@
     top: 84px;
     bottom: 0;
     right: 0;
+    transform: translateY(-500%);
     width: 300px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -153,6 +154,7 @@
         overflow: visible;
         opacity: 1;
         transition: opacity .3s;
+        transform: translateY(0%);
     }
 }
 
@@ -1002,17 +1004,17 @@
         }
 
         &-1 {
-            top: 7%;
+            top: 9%;
             left: 64%;
         }
 
         &-2 {
-            top: 7%;
+            top: 9%;
             left: 64%;
         }
 
         &-3 {
-            top: 7%;
+            top: 9%;
             left: 64%;
         }
 
@@ -1032,17 +1034,17 @@
         }
 
         &-7 {
-            top: 7%;
+            top: 10%;
             left: -33%;
         }
 
         &-8 {
-            top: 7%;
+            top: 10%;
             left: -33%;
         }
 
         &-9 {
-            top: 7%;
+            top: 10%;
             left: -33%;
         }
     }
