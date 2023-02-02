@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(e.target)
     });
 
+    //search
+    const serchLink = document.querySelector('.user-nav__link');
+    const serchPopup = document.querySelector('.serch-popup');
+
+    serchLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        serchPopup.classList.toggle('serch-popup--active');
+    })
+
     //btn
     bestSalesBtn.forEach(item => item.addEventListener('click', function () {
         let product = this.nextElementSibling;
