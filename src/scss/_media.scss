@@ -38,21 +38,30 @@
     }
 
     .best-sales__product-item.best-sales__product-item--active {
-
         width: 300px;
         height: 430px;
     }
 
-    .drop__menu-list--active.drop__menu-list-training {
+    .drop__menu-list--active.drop__menu-list-training,
+    .drop__menu-list--active.drop__menu-list-about {
+        position: static;
+        box-shadow: none;
         top: 57%;
         left: 3%;
-
     }
 
-    .drop__menu-list-about.drop__menu-list--active {
-        top: 80%;
-        left: 3%;
+    .drop__menu-list-link {
+        display: block;
+        color: #878787;
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 20px 20px 20px 40px;
+        cursor: pointer;
+        transition: color .3s;
+    }
 
+    .active-link {
+        background-color: rgba(0, 0, 0, .04);
     }
 
     .best-sales__title::after,
