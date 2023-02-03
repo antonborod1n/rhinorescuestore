@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let catalogFilterDropList = document.querySelector('.catalog__filter-drop-list');
     let catalogFilterSortBtn = document.querySelector('.catalog__filter-main-btn');
     let catalogFilterSort = document.querySelector('.catalog__filter-sort');
+    let filterSubmitBtn = document.querySelector('.catalog__filter-sort-btn');
 
     document.addEventListener('click', function (e) {
         if (e.target == catalogFilterBtn) {
@@ -25,5 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!its_menu && !its_btnMenu && menu_is_active) {
             catalogFilterSort.classList.toggle('active-content');
         };
+    })
+
+    filterSubmitBtn.addEventListener('click', function (e) {
+        e.preventDefault()
+        catalogFilterSort.classList.remove('active-content');
     })
 });
