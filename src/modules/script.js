@@ -107,10 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     })
 
-
-
-
-
     menuLinkKits.addEventListener('click', function () {
         dropMenuListKits.classList.toggle('drop__menu-list--active');
     })
