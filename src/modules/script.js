@@ -19,8 +19,8 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-arrows-back.svg" alt="arrow"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-arrows-forward.svg" alt="arrow"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-arrows-back.svg" alt="arrow"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow-arrows-forward.svg" alt="arrow"></button>',
     });
 });
 
