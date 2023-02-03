@@ -43,24 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     headerInner.addEventListener('mouseover', function (e) {
         let target = e.target;
+
         if (target.classList.contains('menu__link-kits')) {
-            closeMenu();
             dropMenuPack.classList.remove('menu--active');
-            dropMenuKits.classList.toggle('menu--active');
+            dropMenuKits.classList.add('menu--active');
         }
         if (target.classList.contains('menu__link-pack')) {
-            closeMenu();
             dropMenuKits.classList.remove('menu--active');
-            dropMenuPack.classList.toggle('menu--active');
+            dropMenuPack.classList.add('menu--active');
         }
-        /* if (target.classList.contains('menu__link-training')) {
-            closeMenu();
+        if (target.classList.contains('menu__link-training')) {
+            dropMenuAbout.classList.remove('drop__menu-list--active')
             dropMenuTraining.classList.add('drop__menu-list--active')
         }
         if (target.classList.contains('menu__link-about')) {
-            closeMenu();
+            dropMenuTraining.classList.remove('drop__menu-list--active')
             dropMenuAbout.classList.add('drop__menu-list--active')
-        } */
+        }
     });
 
     document.addEventListener('click', function (e) {
@@ -107,36 +106,44 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     })
 
-    menuLinkKits.addEventListener('click', function () {
-        dropMenuListKits.classList.toggle('drop__menu-list--active');
-    })
-
-    menuLinkAbout.addEventListener('click', function () {
-        dropMenuAbout.classList.toggle('drop__menu-list--active');
-        let btn = document.querySelector('.menu__item-plus-btn-about');
-        btn.classList.toggle('active-style');
-    })
-
-    menuLinkTraining.addEventListener('click', function () {
-        dropMenuAbout.classList.toggle('drop__menu-list--active');
-        let btn = document.querySelector('.menu__item-plus-btn-training');
-        btn.classList.toggle('active-style');
-    })
-
-    menuLinkKits.addEventListener('click', function () {
+    menuLinkKits.addEventListener('click', function (e) {
         dropMenuListKits.classList.toggle('menu--active');
+        console.log(e.target)
         let btn = document.querySelector('.menu__item-plus-btn-kits');
         btn.classList.toggle('active-style');
     })
 
-    menuLinkTraining.addEventListener('click', function () {
-        dropMenuTraining.classList.toggle('drop__menu-list--active');
+    menuLinkTraining.addEventListener('click', function (e) {
+        /* dropMenuTraining.classList.toggle('drop__menu-list--active'); */
+        let btn = document.querySelector('.menu__item-plus-btn-training');
+
+        if (dropMenuTraining.classList.contains('drop__menu-list--active')) {
+            dropMenuTraining.classList.remove('drop__menu-list--active');
+            btn.classList.remove('active-style');
+        } else {
+            dropMenuTraining.classList.add('drop__menu-list--active')
+            btn.classList.add('active-style');
+        }
     })
 
-    function closeMenu() {
-        /* dropMenu.forEach(item => item.classList.remove('menu--active',)); */
-        /* dropMenu.forEach(item => item.classList.remove('drop__menu-list--active')); */
-    }
+    menuLinkAbout.addEventListener('click', function (e) {
+        /* dropMenuAbout.classList.toggle('drop__menu-list--active'); */
+        let btn = document.querySelector('.menu__item-plus-btn-about');
+
+        if (dropMenuAbout.classList.contains('drop__menu-list--active')) {
+            dropMenuAbout.classList.remove('drop__menu-list--active');
+            btn.classList.remove('active-style');
+        } else {
+            dropMenuAbout.classList.add('drop__menu-list--active')
+            btn.classList.add('active-style');
+        }
+    })
+
+    /*  function closeMenu() {
+         dropMenu.forEach(item => item.classList.remove('menu--active',));
+         dropMenu.forEach(item => item.classList.remove('drop__menu-list--active'));
+     }
+  */
 
     //search
     const serchLink = document.querySelector('.user-nav__link-search');
