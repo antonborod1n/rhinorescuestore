@@ -354,9 +354,6 @@
     }
 }
 
-.cart__form-btn-pay {
-    margin-top: 8px;
-}
 
 .cart__form-btn-shopay {
     background: #5a31f4;
@@ -365,39 +362,6 @@
     &:hover {
         transition: background-color .3s;
         background-color: darken($color: #5a31f4, $amount: 8%);
-    }
-}
-
-.cart__form-btn-pay,
-.cart__form-btn-shopay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 54px;
-    padding: 12px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-.cart__form-btn-pay-paypal {
-    background: #ffc439;
-    transition: background-color .3s;
-
-    &:hover {
-        transition: background-color .3s;
-        background-color: darken($color: #ffc439, $amount: 8%);
-    }
-}
-
-.cart__form-btn-pay-google {
-    background: #000;
-    transition: background-color .3s;
-
-    &:hover {
-        transition: background-color .3s;
-        background-color: darken($color: #000, $amount: 8%);
     }
 }
 
@@ -647,10 +611,6 @@
     .cart__form-total-text,
     .cart__form-total-row {
         text-align: center;
-    }
-
-    .cart__form-btn-pay {
-        width: 100%;
     }
 
     .cart__form-total-row {
