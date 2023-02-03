@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let catalogFilterDropList = document.querySelector('.catalog__filter-drop-list');
     let catalogFilterSortBtn = document.querySelector('.catalog__filter-main-btn');
     let catalogFilterSort = document.querySelector('.catalog__filter-sort');
-    let catalog = document.querySelector('.catalog__filter-item');
 
     document.addEventListener('click', function (e) {
         if (e.target == catalogFilterBtn) {

@@ -744,9 +744,6 @@
     }
 }
 
-/* ESSENTIALS */
-
-
 /* SOCIAL */
 
 .social {
@@ -1121,6 +1118,27 @@
     border: none;
     background-color: transparent;
     color: #222;
+
+    &::after {
+        content: url(../images/icons/plus1.svg);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s;
+        transform: rotate(90deg);
+    }
+
+    &.active-style::after {
+        transform: rotate(0deg);
+        transition: all .5s;
+        content: url(../images/icons/minus1.svg);
+    }
 }
 
 .menu__item-plus {

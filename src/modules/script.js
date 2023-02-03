@@ -29,33 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let logoLink = document.querySelector('.logo__link')
     let menuLink = document.querySelectorAll('.menu__link')
     let userNavLink = document.querySelectorAll('.user-nav__link')
-
-    let dropMenu = document.querySelectorAll('.drop__menu')
-
     let dropMenuKits = document.querySelector('.drop__menu-kits');
     let dropMenuPack = document.querySelector('.drop__menu-pack');
     let dropMenuTraining = document.querySelector('.drop__menu-list-training');
     let dropMenuAbout = document.querySelector('.drop__menu-list-about');
-
     let dropMenuListKits = document.querySelector('.drop__menu-list-kits')
-    let dropMenuListPack = document.querySelector('.drop__menu-list-pack')
-
     let menuLinkKits = document.querySelector('.menu__link-kits')
     let menuLinkPack = document.querySelector('.menu__link-pack')
-    let menuLinkabout = document.querySelector('.menu__link-about')
+    let menuLinkAbout = document.querySelector('.menu__link-about')
     let menuLinkTraining = document.querySelector('.menu__link-training')
-
-    let trainingLink = document.querySelector('.menu__link-training');
-    let aboutLink = document.querySelector('.menu__link-about');
-    let bestSalesInner = document.querySelector('.best-sales__inner');
     let bestSalesBtn = document.querySelectorAll('.app-best-sales__btn');
-    let bestSalesProductItem = document.querySelectorAll('.best-sales__product-item');
     let closebestSalesProductItem = document.querySelectorAll('.best-sales__product-item-close');
 
     headerInner.addEventListener('mouseover', function (e) {
         let target = e.target;
-        let current = e.currentTarget;
-
         if (target.classList.contains('menu__link-kits')) {
             closeMenu();
             dropMenuPack.classList.remove('menu--active');
@@ -76,12 +63,74 @@ document.addEventListener('DOMContentLoaded', () => {
         } */
     });
 
+    document.addEventListener('click', function (e) {
+        const target = e.target;
+        const its_menu = target == dropMenuKits || dropMenuKits.contains(target);
+        const its_btnMenu = target == menuLinkKits;
+        const menu_is_active = dropMenuKits.classList.contains("menu--active");
+
+        if (!its_menu && !its_btnMenu && menu_is_active) {
+            dropMenuKits.classList.toggle('menu--active');
+        };
+    })
+
+    document.addEventListener('click', function (e) {
+        const target = e.target;
+        const its_menu = target == dropMenuPack || dropMenuPack.contains(target);
+        const its_btnMenu = target == menuLinkPack;
+        const menu_is_active = dropMenuPack.classList.contains("menu--active");
+
+        if (!its_menu && !its_btnMenu && menu_is_active) {
+            dropMenuPack.classList.toggle('menu--active');
+        };
+    })
+
+    document.addEventListener('click', function (e) {
+        const target = e.target;
+        const its_menu = target == dropMenuAbout || dropMenuAbout.contains(target);
+        const its_btnMenu = target == menuLinkAbout;
+        const menu_is_active = dropMenuAbout.classList.contains("drop__menu-list--active");
+
+        if (!its_menu && !its_btnMenu && menu_is_active) {
+            dropMenuAbout.classList.toggle('drop__menu-list--active');
+        };
+    })
+
+    document.addEventListener('click', function (e) {
+        const target = e.target;
+        const its_menu = target == dropMenuTraining || dropMenuTraining.contains(target);
+        const its_btnMenu = target == menuLinkTraining;
+        const menu_is_active = dropMenuTraining.classList.contains("drop__menu-list--active");
+
+        if (!its_menu && !its_btnMenu && menu_is_active) {
+            dropMenuTraining.classList.toggle('drop__menu-list--active');
+        };
+    })
+
+
+
+
+
     menuLinkKits.addEventListener('click', function () {
         dropMenuListKits.classList.toggle('drop__menu-list--active');
     })
 
-    menuLinkabout.addEventListener('click', function () {
+    menuLinkAbout.addEventListener('click', function () {
         dropMenuAbout.classList.toggle('drop__menu-list--active');
+        let btn = document.querySelector('.menu__item-plus-btn-about');
+        btn.classList.toggle('active-style');
+    })
+
+    menuLinkTraining.addEventListener('click', function () {
+        dropMenuAbout.classList.toggle('drop__menu-list--active');
+        let btn = document.querySelector('.menu__item-plus-btn-training');
+        btn.classList.toggle('active-style');
+    })
+
+    menuLinkKits.addEventListener('click', function () {
+        dropMenuListKits.classList.toggle('menu--active');
+        let btn = document.querySelector('.menu__item-plus-btn-kits');
+        btn.classList.toggle('active-style');
     })
 
     menuLinkTraining.addEventListener('click', function () {
