@@ -37,6 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let dropMenuTraining = document.querySelector('.drop__menu-list-training');
     let dropMenuAbout = document.querySelector('.drop__menu-list-about');
 
+    let dropMenuListKits = document.querySelector('.drop__menu-list-kits')
+    let dropMenuListPack = document.querySelector('.drop__menu-list-pack')
+
+    let menuLinkKits = document.querySelector('.menu__link-kits')
+    let menuLinkPack = document.querySelector('.menu__link-pack')
+    let menuLinkabout = document.querySelector('.menu__link-about')
+    let menuLinkTraining = document.querySelector('.menu__link-training')
+
     let trainingLink = document.querySelector('.menu__link-training');
     let aboutLink = document.querySelector('.menu__link-about');
     let bestSalesInner = document.querySelector('.best-sales__inner');
@@ -50,34 +58,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (target.classList.contains('menu__link-kits')) {
             closeMenu();
-            dropMenuKits.classList.add('menu--active')
+            dropMenuPack.classList.remove('menu--active');
+            dropMenuKits.classList.toggle('menu--active');
         }
         if (target.classList.contains('menu__link-pack')) {
             closeMenu();
-            dropMenuPack.classList.add('menu--active')
+            dropMenuKits.classList.remove('menu--active');
+            dropMenuPack.classList.toggle('menu--active');
         }
-        if (target.classList.contains('menu__link-training')) {
+        /* if (target.classList.contains('menu__link-training')) {
             closeMenu();
             dropMenuTraining.classList.add('drop__menu-list--active')
         }
         if (target.classList.contains('menu__link-about')) {
             closeMenu();
             dropMenuAbout.classList.add('drop__menu-list--active')
-        }
+        } */
     });
 
-    headerInner.addEventListener('click', function (e) {
-        let target = e.target;
-        let current = e.currentTarget;
-        console.log(current)
-        if (target.contains('goods')) {
-            closeMenu();
-        }
-    });
+    menuLinkKits.addEventListener('click', function () {
+        dropMenuListKits.classList.toggle('drop__menu-list--active');
+    })
+
+    menuLinkabout.addEventListener('click', function () {
+        dropMenuAbout.classList.toggle('drop__menu-list--active');
+    })
+
+    menuLinkTraining.addEventListener('click', function () {
+        dropMenuTraining.classList.toggle('drop__menu-list--active');
+    })
 
     function closeMenu() {
-        dropMenu.forEach(item => item.classList.remove('menu--active',));
-        dropMenu.forEach(item => item.classList.remove('drop__menu-list--active'));
+        /* dropMenu.forEach(item => item.classList.remove('menu--active',)); */
+        /* dropMenu.forEach(item => item.classList.remove('drop__menu-list--active')); */
     }
 
     //search

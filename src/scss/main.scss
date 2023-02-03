@@ -12,11 +12,6 @@
 @import 'blog';
 
 
-
-.drop__menu-list-kits {
-    display: none;
-}
-
 /* HEADER */
 .header {
     &__menu {
@@ -86,7 +81,9 @@
         content: url(../images/icons/arrow-down.svg);
     }
 
+
     &__link {
+        position: relative;
         color: $white;
         font-size: 14px;
         line-height: 24px;
@@ -1107,6 +1104,29 @@
 
 /* DROP-MENU */
 
+.drop__menu-list-kits {
+    display: none;
+}
+
+.drop__menu-kits,
+.drop__menu-pack {
+    display: block;
+}
+
+.menu__item-plus-btn {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+    color: #222;
+}
+
+.menu__item-plus {
+    position: relative;
+}
+
 .drop__menu-list {
     overflow: hidden;
     opacity: 0;
@@ -1115,7 +1135,6 @@
     height: 0;
     width: 0;
     transition: opacity .3s;
-
 }
 
 .drop__menu-list--active {
@@ -1183,6 +1202,8 @@
 .drop__menu-pack--active {
     padding: 30px 0;
 }
+
+//SERCH
 
 .seacrh-result {
     padding: 20px 0;

@@ -4,6 +4,8 @@
         height: 100%;
     }
 
+
+
     .best-sales__product-item {
         display: none;
     }
@@ -33,13 +35,29 @@
 }
 
 @media (max-width: 1200px) {
+
+    .menu__item-plus-btn {
+        display: block;
+    }
+
+    .drop__menu-list-kits {
+        display: block;
+    }
+
+    .drop__menu-kits,
+    .drop__menu-pack {
+        display: none;
+    }
+
     .best-sales__product-item.best-sales__product-item--active {
         width: 300px;
         height: 430px;
     }
 
     .drop__menu-list--active.drop__menu-list-training,
-    .drop__menu-list--active.drop__menu-list-about {
+    .drop__menu-list--active.drop__menu-list-about,
+    .drop__menu-list--active.drop__menu-list-kits,
+    .drop__menu-list--active.drop__menu-list-pack {
         position: static;
         box-shadow: none;
         top: 57%;
