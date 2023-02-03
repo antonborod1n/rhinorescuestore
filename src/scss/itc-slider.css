@@ -200,6 +200,10 @@
   .itc-slider__item.essential-slider__item .products-item:nth-last-child(-n+3) {
     display: none;
   }
+
+  .itc-slider__item.kits-slider__item .products-item:nth-last-child(-n+2) {
+    display: none;
+  }
 }
 
 @media (max-width: 450px) {}
