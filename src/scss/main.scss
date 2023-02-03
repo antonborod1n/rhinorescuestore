@@ -517,12 +517,6 @@
             border-radius: 20px;
             margin-bottom: 10px;
 
-            &-view {
-                &:after {
-                    content: url(../images/icons/eye.svg);
-                }
-            }
-
             &-shop {
                 &:after {
                     content: url(../images/icons/cart.svg);
