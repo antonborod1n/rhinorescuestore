@@ -10,10 +10,10 @@
 
 <body>
     <header class="header">
-        <div class="header__inner">
+        <div class="header__inner header__inner--active">
     <div class="container">
         <div class="header__menu">
-            <button class="menu__burger">
+            <button class="open-nav-menu">
                 <svg viewBox="0 0 32 32" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" fill="#8f8f8f">
                     <g data-name="Layer 2" id="Layer_2">
                         <path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z" />
@@ -22,105 +22,17 @@
                     </g>
                 </svg>
             </button>
-            <a class="logo__link" href="#">
-                <img class="logo__img" src="dfbca3ad93da87b9423f.webp" alt="logo">
+
+            <a class="logo__link--active" href="#">
+                <img class="logo__img" src="df5f9e2f7ccd51180f70.avif" alt="logo">
             </a>
-            <nav class="nav">
-                <ul class="menu__list">
-                    <li class="menu__item">
-                        <a class="menu__link menu__link-home" data-drop="home">
-                            HOME
-                        </a>
-                    </li>
-                    <li class="menu__item menu__item-plus">
-                        <a class="menu__link menu__link-kits menu__drop" data-drop="kits">
-                            First Aid Kits
-                            <span class="menu__item-plus-btn menu__item-plus-btn-kits"></span>
-                        </a>
 
-                        <ul class="drop__menu-list drop__menu-list-kits">
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    subitem
-                                </a>
-                            </li>
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    subitem
-                                </a>
-                            </li>
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    subitem
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link menu__link-pack menu__drop" data-drop="pack">
-                            Medic Pack
-                        </a>
-                    </li>
-                    <li class="menu__item menu__item-plus">
-                        <a class="menu__link menu__link-training menu__drop" data-drop="training">
-                            Training Course
-                            <span class="menu__item-plus-btn menu__item-plus-btn-training"></span>
-                        </a>
+            <div class="menu-overlay">
+            </div>
 
-                        <ul class="drop__menu-list drop__menu-list-training">
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    Battlefield first aid
-                                </a>
-                            </li>
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    What is the importance of tourniquet
-                                </a>
-                            </li>
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    The Best IFAK Guide
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item-plus">
-                        <a class="menu__link menu__link-about menu__drop" data-drop="about">
-                            About Us
-                            <span class="menu__item-plus-btn menu__item-plus-btn-about"></span>
-                        </a>
-                        <ul class="drop__menu-list drop__menu-list-about">
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    Brand Story
-                                </a>
-                            </li>
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    Genuine Query
-                                </a>
-                            </li>
-                            <li class="drop__menu-list-item">
-                                <a class="drop__menu-list-link" href="#">
-                                    Traning Course
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="menu__item">
-                        <a class="menu__link" data-drop="about" href="/rhinorescuestore/dist/contact.html">
-                            Contact
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" data-drop="about" href="/rhinorescuestore/dist/page.html">
-                            Page
-                        </a>
-                    </li>
-                </ul>
-                <button class="nav__close">
+            <nav class="nav-menu">
+                <div class="nav-menu-top">MENU</div>
+                <button class="close-nav-menu">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px"
                         height="40px" viewBox="0 0 40 40" version="1.1">
                         <g>
@@ -130,7 +42,59 @@
                         </g>
                     </svg>
                 </button>
+                <ul class="menu">
+                    <li class="menu-item menu-item-has-children">
+                        <a class="menu-item__link menu-item__link-home" href="#">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a class="menu-item__link menu__link-kits" href="#" data-toggle="sub-menu">First Aid
+                            Kits<span class="plus"></span></a>
+                        <ul class="sub-menu sub-menu-active">
+                            <li class="menu-item"><a class="submenu__link" href="#">Home 1</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">Home 2</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">Home 3</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">Home 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a class="menu-item__link menu__link-pack" href="#" data-toggle="sub-menu">Medic
+                            Pack<span class="plus"></span></a>
+                        <ul class="sub-menu sub-menu-active">
+                            <li class="menu-item"><a class="submenu__link" href="#">page 1</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 2</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 3</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item__link" href="#">First Aid Supplies</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a class="menu-item__link" href="#" data-toggle="sub-menu">Training Course<span
+                                class="plus"></span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="submenu__link" href="#">page 1</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 2</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 3</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item__link" href="#">Wholesale-Retail</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a class="menu-item__link" href="#" data-toggle="sub-menu">About us<span
+                                class="plus"></span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="submenu__link" href="#">page 1</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 2</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 3</a></li>
+                            <li class="menu-item"><a class="submenu__link" href="#">page 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
+
             <div class="user-nav">
                 <div class="serch-popup">
                     <button class="serch-popup-close">
@@ -223,7 +187,7 @@
                         </svg>
                     </a>
                 </div>
-                <a class="user-nav__link user-nav__link-search" href="#">
+                <a class="user-nav__link user-nav__link--active user-nav__link-search" href="#">
                     <svg class="user-nav__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -233,7 +197,7 @@
                             stroke-linejoin="round" />
                     </svg>
                 </a>
-                <a class="user-nav__link" href="#">
+                <a class="user-nav__link user-nav__link--active" href="#">
                     <svg class="user-nav__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path

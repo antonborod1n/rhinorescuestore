@@ -25,21 +25,12 @@ $(function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    let headerInner = document.querySelector('.header__inner')
-    let logoLink = document.querySelector('.logo__link')
-    let menuLink = document.querySelectorAll('.menu__link')
-    let userNavLink = document.querySelectorAll('.user-nav__link')
+    //drop menu slider
+    let headerInner = document.querySelector('.header__inner');
     let dropMenuKits = document.querySelector('.drop__menu-kits');
     let dropMenuPack = document.querySelector('.drop__menu-pack');
-    let dropMenuTraining = document.querySelector('.drop__menu-list-training');
-    let dropMenuAbout = document.querySelector('.drop__menu-list-about');
-    let dropMenuListKits = document.querySelector('.drop__menu-list-kits')
-    let menuLinkKits = document.querySelector('.menu__link-kits')
-    let menuLinkPack = document.querySelector('.menu__link-pack')
-    let menuLinkAbout = document.querySelector('.menu__link-about')
-    let menuLinkTraining = document.querySelector('.menu__link-training')
-    let bestSalesBtn = document.querySelectorAll('.app-best-sales__btn');
-    let closebestSalesProductItem = document.querySelectorAll('.best-sales__product-item-close');
+    let menuLinkKits = document.querySelector('.menu__link-kits');
+    let menuLinkPack = document.querySelector('.menu__link-pack');
 
     headerInner.addEventListener('mouseover', function (e) {
         let target = e.target;
@@ -51,14 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target.classList.contains('menu__link-pack')) {
             dropMenuKits.classList.remove('menu--active');
             dropMenuPack.classList.add('menu--active');
-        }
-        if (target.classList.contains('menu__link-training')) {
-            dropMenuAbout.classList.remove('drop__menu-list--active')
-            dropMenuTraining.classList.add('drop__menu-list--active')
-        }
-        if (target.classList.contains('menu__link-about')) {
-            dropMenuTraining.classList.remove('drop__menu-list--active')
-            dropMenuAbout.classList.add('drop__menu-list--active')
         }
     });
 
@@ -84,67 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     })
 
-    document.addEventListener('click', function (e) {
-        const target = e.target;
-        const its_menu = target == dropMenuAbout || dropMenuAbout.contains(target);
-        const its_btnMenu = target == menuLinkAbout;
-        const menu_is_active = dropMenuAbout.classList.contains("drop__menu-list--active");
-
-        if (!its_menu && !its_btnMenu && menu_is_active) {
-            dropMenuAbout.classList.toggle('drop__menu-list--active');
-        };
-    })
-
-    document.addEventListener('click', function (e) {
-        const target = e.target;
-        const its_menu = target == dropMenuTraining || dropMenuTraining.contains(target);
-        const its_btnMenu = target == menuLinkTraining;
-        const menu_is_active = dropMenuTraining.classList.contains("drop__menu-list--active");
-
-        if (!its_menu && !its_btnMenu && menu_is_active) {
-            dropMenuTraining.classList.toggle('drop__menu-list--active');
-        };
-    })
-
-    menuLinkKits.addEventListener('click', function (e) {
-        dropMenuListKits.classList.toggle('menu--active');
-        console.log(e.target)
-        let btn = document.querySelector('.menu__item-plus-btn-kits');
-        btn.classList.toggle('active-style');
-    })
-
-    menuLinkTraining.addEventListener('click', function (e) {
-        /* dropMenuTraining.classList.toggle('drop__menu-list--active'); */
-        let btn = document.querySelector('.menu__item-plus-btn-training');
-
-        if (dropMenuTraining.classList.contains('drop__menu-list--active')) {
-            dropMenuTraining.classList.remove('drop__menu-list--active');
-            btn.classList.remove('active-style');
-        } else {
-            dropMenuTraining.classList.add('drop__menu-list--active')
-            btn.classList.add('active-style');
-        }
-    })
-
-    menuLinkAbout.addEventListener('click', function (e) {
-        /* dropMenuAbout.classList.toggle('drop__menu-list--active'); */
-        let btn = document.querySelector('.menu__item-plus-btn-about');
-
-        if (dropMenuAbout.classList.contains('drop__menu-list--active')) {
-            dropMenuAbout.classList.remove('drop__menu-list--active');
-            btn.classList.remove('active-style');
-        } else {
-            dropMenuAbout.classList.add('drop__menu-list--active')
-            btn.classList.add('active-style');
-        }
-    })
-
-    /*  function closeMenu() {
-         dropMenu.forEach(item => item.classList.remove('menu--active',));
-         dropMenu.forEach(item => item.classList.remove('drop__menu-list--active'));
-     }
-  */
-
     //search
     const serchLink = document.querySelector('.user-nav__link-search');
     const serchPopup = document.querySelector('.serch-popup');
@@ -160,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     //btn
+    let bestSalesBtn = document.querySelectorAll('.app-best-sales__btn');
+    let closebestSalesProductItem = document.querySelectorAll('.best-sales__product-item-close');
+
     bestSalesBtn.forEach(item => item.addEventListener('click', function () {
         let product = this.nextElementSibling;
         product.classList.toggle('best-sales__product-item--active')
@@ -170,7 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
         product.classList.remove('best-sales__product-item--active');
     }))
 
-    //header
+    //header change
+    let logoLink = document.querySelector('.logo__link')
+    let menuLink = document.querySelectorAll('.menu__link')
+    let userNavLink = document.querySelectorAll('.user-nav__link');
+
     window.addEventListener('scroll', function () {
         if (window.scrollY > 1) {
             headerInner.classList.add('header__inner--active');
