@@ -43,6 +43,7 @@
 .logo {
     &__link {
         display: none;
+        min-width: 150px;
 
         &--active {
             display: block;
@@ -1186,6 +1187,7 @@ body.hidden-scrolling {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     column-gap: 35px;
 }
 
