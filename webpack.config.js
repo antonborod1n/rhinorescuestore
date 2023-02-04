@@ -12,6 +12,8 @@ module.exports = {
     index_blog: path.resolve(__dirname, './src/index_blog.js'),
     index_cart: path.resolve(__dirname, './src/index_cart.js'),
     index_article: path.resolve(__dirname, './src/index_article.js'),
+    index_contact: path.resolve(__dirname, './src/index_contact.js'),
+    index_page: path.resolve(__dirname, './src/index_page.js'),
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -48,6 +50,16 @@ module.exports = {
       template: path.resolve(__dirname, './src/article.html'),
       filename: 'article.html',
       chunks: ['index_article']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/contact.html'),
+      filename: 'contact.html',
+      chunks: ['index_contact']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/page.html'),
+      filename: 'page.html',
+      chunks: ['index_page']
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
