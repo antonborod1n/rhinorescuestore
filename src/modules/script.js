@@ -1,6 +1,7 @@
 import $ from "jquery";
 import "ion-rangeslider";
 import 'slick-carousel';
+import './header';
 
 $(function () {
     $(".form__filter-input").ionRangeSlider();
@@ -96,33 +97,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }))
 
     //header change
-    let logoLink = document.querySelector('.logo__link')
-    let menuLink = document.querySelectorAll('.menu__link')
-    let userNavLink = document.querySelectorAll('.user-nav__link');
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 1) {
-            headerInner.classList.add('header__inner--active');
-            logoLink.classList.remove('logo__link');
-            logoLink.classList.add('logo__link--active');
-            menuLink.forEach(item => {
-                item.classList.add('menu__link--active');
-            })
-            userNavLink.forEach(item => {
-                item.classList.add('user-nav__link--active');
-            })
-        } else if (window.scrollY < 1) {
-            headerInner.classList.remove('header__inner--active');
-            logoLink.classList.add('logo__link');
-            logoLink.classList.remove('logo__link--active');
-            menuLink.forEach(item => {
-                item.classList.remove('menu__link--active');
-            })
-            userNavLink.forEach(item => {
-                item.classList.remove('user-nav__link--active');
-            })
-        }
-    });
+    /*     let logoLink = document.querySelector('.logo__link')
+        let menuLink = document.querySelectorAll('.menu__link')
+        let userNavLink = document.querySelectorAll('.user-nav__link');
+    
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 1) {
+                headerInner.classList.add('header__inner--active');
+                logoLink.classList.remove('logo__link');
+                logoLink.classList.add('logo__link--active');
+                menuLink.forEach(item => {
+                    item.classList.add('menu__link--active');
+                })
+                userNavLink.forEach(item => {
+                    item.classList.add('user-nav__link--active');
+                })
+            } else if (window.scrollY < 1) {
+                headerInner.classList.remove('header__inner--active');
+                logoLink.classList.add('logo__link');
+                logoLink.classList.remove('logo__link--active');
+                menuLink.forEach(item => {
+                    item.classList.remove('menu__link--active');
+                })
+                userNavLink.forEach(item => {
+                    item.classList.remove('user-nav__link--active');
+                })
+            }
+        }); */
 
     //mobile-menu
     const menuOpenBtn = document.querySelector('.menu__burger');
