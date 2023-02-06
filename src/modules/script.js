@@ -66,7 +66,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!its_menu && !its_btnMenu && menu_is_active) {
             dropMenuPack.classList.toggle('menu--active');
         };
-    })
+    });
+
+    /* document.addEventListener('click', removeElement('.drop__menu-pack', '.menu__link-pack'));
+       document.addEventListener('click', removeElement('.drop__menu-kits', '.menu__link-kits'));
+   
+       function removeElement(menu, link) {
+           const target = e.target;
+           const its_menu = target == menu || menu.contains(target);
+           const its_btnMenu = target == link;
+           const menu_is_active = menu.classList.contains("menu--active");
+   
+           if (!its_menu && !its_btnMenu && menu_is_active) {
+           }
+       } */
 
     //search
     const serchLink = document.querySelector('.user-nav__link-search');
@@ -126,22 +139,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }); */
 
     //mobile-menu
-    const menuOpenBtn = document.querySelector('.menu__burger');
-    const menuList = document.querySelector('.menu__list');
-    const menuCloseBtn = document.querySelector('.nav__close');
-
-    menuOpenBtn.addEventListener('click', function () {
-        menuList.classList.add('menu__list--active');
-        menuCloseBtn.classList.add('nav__close--active');
-        document.body.style.overflow = 'hidden';
-    });
-
-    menuCloseBtn.addEventListener('click', function () {
-        menuList.classList.remove('menu__list--active');
-        this.classList.remove('nav__close--active');
-        document.body.style.overflow = '';
-    });
-
+    /*     const menuOpenBtn = document.querySelector('.menu__burger');
+        const menuList = document.querySelector('.menu__list');
+        const menuCloseBtn = document.querySelector('.nav__close');
+    
+        menuOpenBtn.addEventListener('click', function () {
+            menuList.classList.add('menu__list--active');
+            menuCloseBtn.classList.add('nav__close--active');
+            document.body.style.overflow = 'hidden';
+        });
+    
+        menuCloseBtn.addEventListener('click', function () {
+            menuList.classList.remove('menu__list--active');
+            this.classList.remove('nav__close--active');
+            document.body.style.overflow = '';
+        });
+     */
     //accordion
     function accordeon(triggersSelector) {
         const btns = document.querySelectorAll(triggersSelector);
