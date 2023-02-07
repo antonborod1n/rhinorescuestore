@@ -114,25 +114,6 @@
     }
 }
 
-.article__comment {
-    border: 1px solid #f1f1f1;
-    padding: 15px 20px;
-    margin-top: 40px;
-    text-align: end;
-}
-
-.article__comment-link {
-    font-size: 14px;
-    line-height: 24px;
-    color: $text;
-    transition: all .3s;
-
-    &:hover {
-        transition: all .3s;
-        color: $accent;
-    }
-}
-
 .article {
     &__social {
         text-align: center;
