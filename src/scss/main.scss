@@ -122,6 +122,7 @@
 
 .serch__sinput-box {
     position: relative;
+    margin-bottom: 20px;
 }
 
 .user-nav__link-icon-search {
@@ -1089,7 +1090,24 @@
 //SERCH
 
 .seacrh-result {
+    height: 70%;
     padding: 20px 0;
+    overflow-y: scroll;
+}
+
+.seacrh-result::-webkit-scrollbar {
+    width: 7px;
+}
+
+.seacrh-result::-webkit-scrollbar-thumb {
+    width: 7px;
+    background: #222222;
+    border-radius: 30px;
+}
+
+.seacrh-result::-webkit-scrollbar-track {
+    background: #f3f3f3;
+    border-radius: 30px;
 }
 
 .seacrh-result-title {
